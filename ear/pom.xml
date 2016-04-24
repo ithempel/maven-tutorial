@@ -13,4 +13,42 @@
 
   <name>jee-hello-ear</name>
   <description>EAR Module for the JAVA EE hello world example</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>de.ithempel.maven-tutorial</groupId>
+      <artifactId>javaee-project-business</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <type>ejb</type>
+    </dependency>
+    <dependency>
+      <groupId>de.ithempel.maven-tutorial</groupId>
+      <artifactId>javaee-project-ui</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.8</version>
+        <configuration>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+          <modules>
+            <ejbModule>
+              <groupId>de.ithempel.maven-tutorial</groupId>
+              <artifactId>javaee-project-business</artifactId>
+            </ejbModule>
+            <webModule>
+              <groupId>de.ithempel.maven-tutorial</groupId>
+              <artifactId>javaee-project-ui</artifactId>
+              <contextRoot>/hello</contextRoot>
+            </webModule>
+          </modules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
