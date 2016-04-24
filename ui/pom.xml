@@ -13,4 +13,12 @@
 
   <name>jee-hello-ui</name>
   <description>UI Module for the Java EE hello world example</description>
+  
+  <dependencies>
+    <dependency>
+      <groupId>de.ithempel.maven-tutorial</groupId>
+      <artifactId>javaee-project-business</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
