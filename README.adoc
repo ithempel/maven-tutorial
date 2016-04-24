@@ -1,2 +1,30 @@
 = Maven-Tutorial
 Sebastian Hempel <shempel@it-hempel.de>
+
+This repository contains an example for my Maven Training.
+The small Java EE Application is build as a multi module Maven project.
+
+== Projekt Structure
+
+The multi module project is build up from the following projects:
+
+`javaee-project`:: The parent POM and master for all other projects. This `pom.xml` is used to build the project.
+`javaee-project-business`:: The module with the business logic. This module builds an EJB module.
+`javaee-project-ui`:: The module with the user interface. This module builds a WAR module and dependc on the business module.
+`javaee-project-ear`:: The project to build the final EAR containing the business and ui module.
+
+== Branches
+
+The tutorial steps to build the whole project are realized as different branches.
+Each branch is a step in the tutorial.
+
+The branches are in the following order:
+
+* `parent-pom`
+* `business`
+* `ui`
+* `code`
+* `module-dependencies`
+* `ear`
+
+The `master` branch defines the final state of the module. 
